@@ -21,3 +21,11 @@ export function setClick(selector, callback) {
   });
   qs(selector).addEventListener("click", callback);
 }
+
+/**
+ * Returns the value of the given URL parameter, or null if missing.
+ */
+export function getParam(name) {
+  const params = new URLSearchParams(window.location.search);
+  return params.get(name);
+}
