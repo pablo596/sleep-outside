@@ -44,7 +44,6 @@ export default class ProductDetails {
     const cart = JSON.parse(localStorage.getItem("so-cart")) || [];
     cart.push(this.product);
     setLocalStorage("so-cart", cart);
-    alert(`${this.product.name} has been added to your cart.`);
   }
 
   /**

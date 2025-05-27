@@ -29,3 +29,23 @@ export function getParam(name) {
   const params = new URLSearchParams(window.location.search);
   return params.get(name);
 }
+
+/**
+ * Renders a list of items into parent using a template function.
+ * @param {Function} templateFn  — recibe un item y devuelve HTML string
+ * @param {Element}   parent     — elemento contenedor
+ * @param {Array}     list       — datos a renderizar
+ * @param {string}    [position="afterbegin"]
+ * @param {boolean}   [clear=false]
+ */
+export function renderListWithTemplate(
+  templateFn,
+  parent,
+  list,
+  position = "afterbegin",
+  clear = false,
+) {
+  if (clear) parent.textContent = "";
+  const html = list.map(templateFn).join("");
+  parent.insertAdjacentHTML(position, html);
+}
