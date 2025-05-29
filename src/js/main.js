@@ -1,4 +1,4 @@
-import { getParam } from "./utils.mjs";
+import { cartCount, getParam } from "./utils.mjs";
 import ProductData from "./ProductData.mjs";
 import ProductList from "./ProductList.mjs";
 import ProductDetails from "./ProductDetails.mjs";
@@ -15,3 +15,5 @@ if (productId) {
   const details = new ProductDetails(productId, dataSource);
   details.init();
 }
+
+cartCount();

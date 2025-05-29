@@ -261,3 +261,21 @@ footer {
   font-size: var(--small-font);
   padding: 1em;
 }
+
+.cart > a {
+  text-decoration: none;
+}
+#cart-badge {
+  display: none;
+  background-color: red;
+  width: 22px !important;
+  height: 25px !important;
+  padding-inline: 5px;
+  border-radius: 50px;
+  position: absolute;
+  right: -5px;
+  top: 5px;
+  padding-block: 5px;
+  font-size: 15px;
+  color: white;
+}
