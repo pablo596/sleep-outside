@@ -49,3 +49,13 @@ export function renderListWithTemplate(
   const html = list.map(templateFn).join("");
   parent.insertAdjacentHTML(position, html);
 }
+
+export function cartCount() {
+  const cartItems = getLocalStorage("so-cart");
+
+  const cartBadge = document.getElementById("cart-badge");
+  if (cartItems.length > 0 && cartBadge) {
+    cartBadge.style.display = "inline-block";
+    cartBadge.textContent = cartItems.length;
+  }
+}

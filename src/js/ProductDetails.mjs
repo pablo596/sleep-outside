@@ -1,4 +1,4 @@
-import { setLocalStorage } from "./utils.mjs";
+import { cartCount, setLocalStorage } from "./utils.mjs";
 
 export default class ProductDetails {
   /**
@@ -44,6 +44,7 @@ export default class ProductDetails {
     const cart = JSON.parse(localStorage.getItem("so-cart")) || [];
     cart.push(this.product);
     setLocalStorage("so-cart", cart);
+    cartCount();
   }
 
   /**
