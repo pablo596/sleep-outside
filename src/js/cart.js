@@ -1,4 +1,4 @@
-import { cartCount, getLocalStorage } from "./utils.mjs";
+import { cartCount, getLocalStorage, loadHeaderFooter } from "./utils.mjs";
 
 function renderCartContents() {
   // 1. Get raw array from localStorage (may contain duplicates)
@@ -45,4 +45,4 @@ function cartItemTemplate(item) {
 
 renderCartContents();
 
-cartCount();
+loadHeaderFooter().then(() => cartCount());
