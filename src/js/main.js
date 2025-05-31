@@ -1,4 +1,4 @@
-import { cartCount, getParam } from "./utils.mjs";
+import { cartCount, getParam, loadHeaderFooter } from "./utils.mjs";
 import ProductData from "./ProductData.mjs";
 import ProductList from "./ProductList.mjs";
 import ProductDetails from "./ProductDetails.mjs";
@@ -16,4 +16,4 @@ if (productId) {
   details.init();
 }
 
-cartCount();
+loadHeaderFooter().then(() => cartCount());
